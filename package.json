@@ -1,0 +1,23 @@
+{
+  "name" : "chunk-loader",
+  "version" : "0.0.1",
+  "description" : "Chunk-based file uploader.",
+  "homepage" : "https://github.com/onmodulus/chunk-loader",
+  "author" : "Modulus <support@modulus.io>",
+  "contributors" : {
+    "name" : "Brandon Cannaday",
+    "email" : "brandon@modulus.io"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/onmodulus/chunk-loader"
+  },
+  "main" : "./lib/chunk-loader.js",
+  "dependencies" : {
+    "request" : "2.12.0",
+    "underscore" : "*",
+    "express" : "*",
+    "async" : "*",
+    "node-uuid" : "*"
+  }
+}

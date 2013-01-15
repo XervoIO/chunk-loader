@@ -2,7 +2,9 @@ var express = require('express'),
     app = express(),
     chunkLoader = require(__dirname + '/../lib/chunk-loader'),
     uploader = chunkLoader.Client,
-    server = chunkLoader.Server(app);
+    server = chunkLoader.Server();
+
+app.use(server.middleware());
 
 app.listen(8080);
 

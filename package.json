@@ -18,6 +18,7 @@
     "underscore" : "*",
     "express" : "*",
     "async" : "*",
-    "node-uuid" : "*"
+    "node-uuid" : "*",
+    "file-encryptor" : "git://github.com/onmodulus/file-encryptor.git#master"
   }
 }

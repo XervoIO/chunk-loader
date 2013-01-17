@@ -9,7 +9,7 @@ app.use(server.middleware());
 app.listen(8080);
 
 server.on('complete', function(file) {
-  console.log('Server complete: ' + file.tag.projectId);
+  console.log('Server complete: ' + file.tag.customProperty);
 });
 
 server.auth = function(file, callback) {
@@ -17,7 +17,7 @@ server.auth = function(file, callback) {
 };
 
 setTimeout(function() {
-  var client = uploader.uploadFile(__dirname + '/test-file.txt', { tag: { projectId: '4563' }});
+  var client = uploader.uploadFile(__dirname + '/test-file.txt', { tag: { customProperty: 'customValue' }, encrypted: true });
   client.on('error', function(err) {
     console.log(err);
   });

@@ -4,7 +4,9 @@ var express = require('express'),
     uploader = chunkLoader.Client,
     server = chunkLoader.Server();
 
-app.use(server.middleware());
+app.use(server.middleware( {
+  saveDir: __dirname
+}));
 
 app.listen(8080);
 
@@ -16,8 +18,16 @@ server.auth = function(file, callback) {
   callback();
 };
 
-setTimeout(function() {
-  var client = uploader.uploadFile(__dirname + '/test-file.txt', { tag: { customProperty: 'customValue' }, encrypted: true });
+var doUpload = function() {
+  var client = uploader.uploadFile(
+    __dirname + '/test-file.txt',
+    {
+      tag: { customProperty: 'customValue' },
+      encrypted: true,
+      beginHost: 'http://localhost:8080',
+      uploadHost: 'http://localhost:8080'
+    }
+  );
   client.on('error', function(err) {
     console.log(err);
   });
@@ -33,4 +43,6 @@ setTimeout(function() {
   client.on('progress', function(p) {
     console.log('progress:' + ((p.sent / p.total) * 100));
   });
-}, 1000);
+};
+
+setTimeout(doUpload, 1000);

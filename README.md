@@ -29,14 +29,10 @@ that are uploaded over inconsistent network connections. Built-in support for fi
 ### Options
 
 * `chunkSize`: defaults to `65536`. The size of each individual chunk sent to the server.
-* `beginProtocol`: defaults to `http`. The protocol used for the begin upload request. Can also be `https`.
+* `beginHost`: defaults to `http://localhost:80`. The full host url used for the begin upload request.
 The `tag` option can be used to pass identifying information, in which case you may want this request to
 go over https while the file upload goes over http.
-* `uploadProtocol`: defaults to `http`. The protocol used for uploaded chunks. Can also be `https`.
-* `host`: defaults to `localhost`. The host name of the server where files are uploaded.
-* `beginPort`: defaults to `8080`. The port where the begin upload request is sent. If using https,
-this could be set to 443.
-* `uploadPort`: defaults to `8080`. The port where uploaded chunks are sent.
+* `uploadHost`: defaults to `http://localhost:80`. The url where uploaded chunks are sent.
 * `retryLimit`: defaults to `100`. The number of time a failed chunk will retry.
 * `encrypted`: defaults to `false`. Whether or not to encrypt the file before sending. Files are
 encrypted using the [file-encryptor](https://github.com/onmodulus/file-encryptor) module. Unique

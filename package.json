@@ -1,6 +1,6 @@
 {
   "name" : "chunk-loader",
-  "version" : "0.0.1",
+  "version" : "0.1.1",
   "description" : "Chunk-based file uploader.",
   "homepage" : "https://github.com/onmodulus/chunk-loader",
   "author" : "Modulus <support@modulus.io>",
@@ -16,9 +16,8 @@
   "dependencies" : {
     "request" : "2.12.0",
     "underscore" : "*",
-    "express" : "*",
     "async" : "*",
     "node-uuid" : "*",
-    "file-encryptor" : "git://github.com/onmodulus/file-encryptor.git#master"
+    "file-encryptor" : "0.1.0"
   }
 }

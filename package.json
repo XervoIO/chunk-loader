@@ -1,6 +1,6 @@
 {
   "name" : "chunk-loader",
-  "version" : "0.1.0",
+  "version" : "0.1.0-1",
   "description" : "Chunk-based file uploader.",
   "homepage" : "https://github.com/onmodulus/chunk-loader",
   "author" : "Modulus <support@modulus.io>",

@@ -14,7 +14,7 @@
   },
   "main" : "./lib/chunk-loader.js",
   "dependencies" : {
-    "request" : "2.12.0",
+    "request" : "2.21.0",
     "underscore" : "*",
     "async" : "*",
     "node-uuid" : "*",
